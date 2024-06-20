@@ -1,0 +1,82 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=""
+    />
+    <meta property="og:title" content="" />
+    <meta
+      property=" og:description"
+      content=""
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+
+    <title>{% block title %}Quiz App | Pks{% endblock  %}</title>
+    {% comment %} <link rel="stylesheet" href="{% static "style.css" %}" /> {% endcomment %}
+    {% tailwind_css %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body class="bg-black h-[100vh]">
+    <nav class="h-[10vh] w-[100%] flex justify-between text-white"><span>QuizApp</span><span><ul><li>login</li><li>signup</li></ul></span></nav>
+
+    {% block content %}
+    <div class="flex justify-center items-center h-[90vh] w-[100%]">  
+      <h3 class="text-white font-semibold text-7xl">Welcome to Quiz Web App,<br> Learn something new <br> everyday!</h3>
+    </div>
+    {% endblock  %}
+    <hr>
+    <footer class="text-white w-[100vw]">
+      <div class="flex py-10 px-20">
+        <div class="w-[25%] flex flex-col gap-2">
+          <h2 class="font-bold my-3">Get in Touch</h2>
+          <a href="tel:+91" >+91 99999999,</a>
+          <a href="tel:+91" >+91 11111111</a>
+          <a href="mailto:ask.psoni@gmail.com" >ask.psoni@gmail.com</a>
+          <a href="" >Ranchi, Jharkhand</a>
+        </div>
+        <div class="w-[22.5%]">
+          <h2 class="font-bold my-3">COMMUNITY</h2>
+          <div class="flex flex-col gap-2">
+            <a  href="#">Discord</a>
+          </div>
+        </div>
+        <div class="w-[22.5%]">
+          <h2 class="font-bold my-3">COMPANY</h2>
+          <div class="flex flex-col gap-2">
+            <a href="">About Us</a>
+            <a href="">Support</a>
+            <a href="">Terms and conditions</a>
+            <a href="">Privacy Policy</a>
+          </div>
+        </div>
+        <div class="w-[30%]">
+          <img src="" alt="logo">
+          <p class="my-3">Let’s connect with our socials</p>
+          <div class="socials flex gap-2">
+            <a href="">Linkdin</a>
+            <a href="">Insta</a>
+            <a href="">YT</a>
+            <a href="">Discord</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center h-8">
+        <h1>Copyright © 2024 Praween Soni <br>  All Rights Reserved.</h1>
+      </div>
+    </footer>
+
+
+    {% comment %} <script src="{% static "js/script.js" %}"></script> {% endcomment %}
+  </body>
+</html>
